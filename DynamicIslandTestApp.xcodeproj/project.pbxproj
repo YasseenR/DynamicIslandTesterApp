@@ -6,14 +6,75 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		66F143D42CCFD09500856531 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F143D32CCFD09500856531 /* WidgetKit.framework */; };
+		66F143D62CCFD09500856531 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F143D52CCFD09500856531 /* SwiftUI.framework */; };
+		66F143E32CCFD09600856531 /* ScoreboardExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 66F143D12CCFD09500856531 /* ScoreboardExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66F143E12CCFD09600856531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66F143B42CCFCD7100856531 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66F143D02CCFD09500856531;
+			remoteInfo = ScoreboardExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66F143E82CCFD09600856531 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				66F143E32CCFD09600856531 /* ScoreboardExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		66F143BC2CCFCD7100856531 /* DynamicIslandTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicIslandTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F143D12CCFD09500856531 /* ScoreboardExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScoreboardExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		66F143D32CCFD09500856531 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		66F143D52CCFD09500856531 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		66F143E42CCFD09600856531 /* Exceptions for "Scoreboard" folder in "ScoreboardExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 66F143D02CCFD09500856531 /* ScoreboardExtension */;
+		};
+		66F143EF2CCFD19D00856531 /* Exceptions for "DynamicIslandTestApp" folder in "ScoreboardExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/File.swift,
+			);
+			target = 66F143D02CCFD09500856531 /* ScoreboardExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		66F143BE2CCFCD7100856531 /* DynamicIslandTestApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				66F143EF2CCFD19D00856531 /* Exceptions for "DynamicIslandTestApp" folder in "ScoreboardExtension" target */,
+			);
 			path = DynamicIslandTestApp;
+			sourceTree = "<group>";
+		};
+		66F143D72CCFD09500856531 /* Scoreboard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				66F143E42CCFD09600856531 /* Exceptions for "Scoreboard" folder in "ScoreboardExtension" target */,
+			);
+			path = Scoreboard;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +87,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66F143CE2CCFD09500856531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F143D62CCFD09500856531 /* SwiftUI.framework in Frameworks */,
+				66F143D42CCFD09500856531 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				66F143BE2CCFCD7100856531 /* DynamicIslandTestApp */,
+				66F143D72CCFD09500856531 /* Scoreboard */,
+				66F143D22CCFD09500856531 /* Frameworks */,
 				66F143BD2CCFCD7100856531 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				66F143BC2CCFCD7100856531 /* DynamicIslandTestApp.app */,
+				66F143D12CCFD09500856531 /* ScoreboardExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		66F143D22CCFD09500856531 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66F143D32CCFD09500856531 /* WidgetKit.framework */,
+				66F143D52CCFD09500856531 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +137,12 @@
 				66F143B82CCFCD7100856531 /* Sources */,
 				66F143B92CCFCD7100856531 /* Frameworks */,
 				66F143BA2CCFCD7100856531 /* Resources */,
+				66F143E82CCFD09600856531 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				66F143E22CCFD09600856531 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				66F143BE2CCFCD7100856531 /* DynamicIslandTestApp */,
@@ -69,6 +153,28 @@
 			productName = DynamicIslandTestApp;
 			productReference = 66F143BC2CCFCD7100856531 /* DynamicIslandTestApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		66F143D02CCFD09500856531 /* ScoreboardExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66F143E52CCFD09600856531 /* Build configuration list for PBXNativeTarget "ScoreboardExtension" */;
+			buildPhases = (
+				66F143CD2CCFD09500856531 /* Sources */,
+				66F143CE2CCFD09500856531 /* Frameworks */,
+				66F143CF2CCFD09500856531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				66F143D72CCFD09500856531 /* Scoreboard */,
+			);
+			name = ScoreboardExtension;
+			packageProductDependencies = (
+			);
+			productName = ScoreboardExtension;
+			productReference = 66F143D12CCFD09500856531 /* ScoreboardExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +187,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					66F143BB2CCFCD7100856531 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					66F143D02CCFD09500856531 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -100,12 +209,20 @@
 			projectRoot = "";
 			targets = (
 				66F143BB2CCFCD7100856531 /* DynamicIslandTestApp */,
+				66F143D02CCFD09500856531 /* ScoreboardExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		66F143BA2CCFCD7100856531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66F143CF2CCFD09500856531 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +239,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66F143CD2CCFD09500856531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66F143E22CCFD09600856531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66F143D02CCFD09500856531 /* ScoreboardExtension */;
+			targetProxy = 66F143E12CCFD09600856531 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		66F143C82CCFCD7200856531 /* Debug */ = {
@@ -302,6 +434,60 @@
 			};
 			name = Release;
 		};
+		66F143E62CCFD09600856531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969QW522BA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Scoreboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Scoreboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yasseencreates.DynamicIslandTestApp.Scoreboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66F143E72CCFD09600856531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 969QW522BA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Scoreboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Scoreboard;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yasseencreates.DynamicIslandTestApp.Scoreboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +505,15 @@
 			buildConfigurations = (
 				66F143CB2CCFCD7200856531 /* Debug */,
 				66F143CC2CCFCD7200856531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66F143E52CCFD09600856531 /* Build configuration list for PBXNativeTarget "ScoreboardExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66F143E62CCFD09600856531 /* Debug */,
+				66F143E72CCFD09600856531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
